@@ -21,7 +21,7 @@ if (isset($_GET["key"]) && isset($_GET["action"]) && ($_GET["action"] == "reset"
 	    $expDate = $row1['expDate'];
 		}
   if ($row < 1) {
-      $error = 'The link is invalid/expired. Either you did not copy the correct link from the email, or you have already used the key in which case it is deactivated.<a href="https://Finsimp.com/forgotpasswd/index.php">Click here</a> to reset password.</p>';
+      $error = 'The link is invalid/expired. Either you did not copy the correct link from the email, or you have already used the key in which case it is deactivated.<a href="https://example.net/forgotpasswd/index.php">Click here</a> to reset password.</p>';
   }
 	if ($expDate <= $curDate) {
           $error = "The link is expired. You are trying to use the expired link which as valid only 24 hours.";
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						$del_pwrst =  mysqli_prepare($con, "DELETE FROM passwdrst WHERE `email` = ?");
 							mysqli_stmt_bind_param($del_pwrst, 's', $email);
 							mysqli_stmt_execute($del_pwrst);
-			      $success = 'Congratulations! Your password has been updated successfully. <a href="https://Finsimp.com/login.php">Click here</a> to Login.';
+			      $success = 'Congratulations! Your password has been updated successfully. <a href="https://example.net/login.php">Click here</a> to Login.';
 				  } else {
 						$password_err = 'User does not exist in the system.';
 						error_log('Finsimp - Invalid user attempt to reset password!');
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 <div class="col-3 login border round-large border-cyan blue-faded padding">
-      <a  href="https://Finsimp.com"><img src="../images/fs-logo.png" class="top-radius fslogo"></a>
+      <a  href="https://example.net"><img src="../images/fs-logo.png" class="top-radius fslogo"></a>
         <hr><br />
 				<?php
 				if(!empty($error)){

@@ -53,6 +53,8 @@ Next, import the finsimp.sql file
 
     sudo mysql finsimp < finsimp.sql
 
+Lastly, update registr.php and forgotpasswd files with admin details to receive notifications, etc.
+
 
 ## Usage
 

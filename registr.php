@@ -141,7 +141,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $mail->isSMTP();                                            //Send using SMTP
                   $mail->Host       = 'localhost';                     //Set the SMTP server to send through
                   // $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                  // $mail->Username   = 'zach@znicholson.net';                     //SMTP username
+                  // $mail->Username   = 'user@example.net';                     //SMTP username
                   // $mail->Password   = '';                               //SMTP password
                   // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                   // $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -149,8 +149,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $mail->Port       = 25;
 
                   //Recipients
-                  $mail->setFrom('info@finsimp.com', 'FinSimp');
-                  $mail->addAddress('zach@znicholson.net');     //Add a recipient
+                  $mail->setFrom('info@example.com', 'FinSimp');
+                  $mail->addAddress('user@example.com');     //Add a recipient
                   // $mail->addReplyTo('info@example.com', 'Information');
                   // $mail->addCC('cc@example.com');
                   // $mail->addBCC('bcc@example.com');
@@ -172,15 +172,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               }
                 // // Redirect to login page
                 // header("location: login.php");
-                // $to = "zach@znicholson.net";
+                // $to = "user@example.net";
                 // $subject = "New FinSimp Registration";
                 // $txt = "$param_username - $param_email Successfully registered for a $param_account account at FinSimp!";
-                // $headers = "From: zach@znicholson.net";
+                // $headers = "From: user@example.net";
                 //
                 // mail($to,$subject,$txt,$headers);
 
                 // // Mail user account activation link to new user - Potentially unsafe useage - Need to setup PHPMailer for sending email verifications
-                // $from    = 'zach@znicholson.net';
+                // $from    = 'user@example.net';
                 // $subject = 'Account Activation Required';
                 // $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
                 // $activate_link = 'https://10.10.10.11/fin/action/activate.php?email=' . $_POST['email'] . '&code=' . $param_activate;
@@ -215,7 +215,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="col-3 login border round-large border-cyan blue-faded padding">
-      <a  href="https://Finsimp.com"><img src="./images/fs-logo.png" class="top-radius fslogo"></a>
+      <a  href="https://example.com"><img src="./images/fs-logo.png" class="top-radius fslogo"></a>
       <hr><br />
             <?php
 

@@ -63,7 +63,7 @@ mysqli_query($con, "INSERT INTO `passwdrst` (`email`, `key`, `expDate`) VALUES (
 $output='<p>Dear user,</p>';
 $output.='<p>Please click on the following link to reset your password.</p>';
 $output.='<p>-------------------------------------------------------------</p>';
-$output.='<p><a href="https://Finsimp.com/forgotpasswd/reset-password.php?key='.$key. '&action=reset" target="_blank">https://Finsimp.com/forgotpasswd/reset-password.php?key='.$key. '&action=reset</a></p>';
+$output.='<p><a href="https://example.net/forgotpasswd/reset-password.php?key='.$key. '&action=reset" target="_blank">https://example.net/forgotpasswd/reset-password.php?key='.$key. '&action=reset</a></p>';
 $output.='<p>-------------------------------------------------------------</p>';
 $output.='<p>Please be sure to copy the entire link into your browser. The link will expire after 1 day for security reason.</p>';
 $output.='<p>If you did not request this forgotten password email, no action is needed, your password will not be reset. However, you may want to log into your account and change your security password as someone may have guessed it.</p>';
@@ -78,20 +78,20 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = "localhost"; // Enter your host here
 $mail->SMTPAuth = true;
-$mail->Username = "admin@finsimp.com"; // Enter your email here
-$mail->Password = "finsimp123!@#"; //Enter your passwrod here
+$mail->Username = "admin@example.net"; // Enter your email here
+$mail->Password = ""; //Enter your passwrod here
 // $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 // $mail->Port= 587;
 $mail->Port = 25;
 $mail->IsHTML(true);
-$mail->From = "admin@finsimp.com";
+$mail->From = "admin@example.net";
 $mail->FromName = "FinSimp";
 $mail->Sender = $fromserver; // indicates ReturnPath header
 $mail->Subject = $subject;
 $mail->Body = $body;
 $mail->AddAddress($email_to);
 $mail->Send();
-$success = "An email has been sent to you with instructions on how to reset your password. Return to login page <a href='https://Finsimp.com/login.php'>FinSimp.com</a>";
+$success = "An email has been sent to you with instructions on how to reset your password. Return to login page <a href='https://example.net/login.php'>example.net</a>";
   }
 }
 
@@ -109,7 +109,7 @@ $success = "An email has been sent to you with instructions on how to reset your
 </head>
 <body>
 <div class="col-3 login border round-large border-cyan blue-faded padding">
-      <a  href="https://Finsimp.com"><img src="../images/fs-logo.png" class="top-radius fslogo"></a>
+      <a  href="https://example.net"><img src="../images/fs-logo.png" class="top-radius fslogo"></a>
         <hr><br />
         <?php
         if(!empty($email_err)){

@@ -70,10 +70,10 @@ $output.='<p>If you did not request this forgotten password email, no action is 
 $output.='<p>Thanks,</p>';
 $output.='<p>FinSimp Team</p>';
 $body = $output;
-$subject = "Password Recovery - FinSimp.com";
+$subject = "Password Recovery - example.com";
 
 $email_to = $email;
-$fromserver = "admin@finsimp.com";
+$fromserver = "admin@example.com";
 $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = "localhost"; // Enter your host here
